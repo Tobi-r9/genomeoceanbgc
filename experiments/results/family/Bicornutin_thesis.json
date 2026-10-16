@@ -1,0 +1,28 @@
+{
+  "family": "Bicornutin",
+  "params": {
+    "objective": "binary:logistic",
+    "eval_metric": "auc",
+    "max_depth": 6,
+    "eta": 0.05,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "tree_method": "hist",
+    "random_state": 42
+  },
+  "n_rounds": 300,
+  "n_features_val": 2105,
+  "n_features_test": 2109,
+  "n_organisms_val": 97,
+  "n_organisms_test": 101,
+  "tuning": "none (their code has no sweep)",
+  "val": {
+    "ap": 0.5907904215878581,
+    "roc_auc": 0.8663798171404256
+  },
+  "test": {
+    "ap": 0.6976412151100819,
+    "roc_auc": 0.9203205185918789,
+    "chance_ap": 0.1851063829787234
+  }
+}

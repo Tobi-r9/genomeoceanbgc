@@ -1,0 +1,28 @@
+{
+  "family": "Erwinia",
+  "params": {
+    "objective": "binary:logistic",
+    "eval_metric": "auc",
+    "max_depth": 6,
+    "eta": 0.05,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "tree_method": "hist",
+    "random_state": 42
+  },
+  "n_rounds": 300,
+  "n_features_val": 2089,
+  "n_features_test": 2109,
+  "n_organisms_val": 81,
+  "n_organisms_test": 101,
+  "tuning": "none (their code has no sweep)",
+  "val": {
+    "ap": 0.356321131145764,
+    "roc_auc": 0.8124110592428564
+  },
+  "test": {
+    "ap": 0.49349413379258056,
+    "roc_auc": 0.8207845324409742,
+    "chance_ap": 0.10110294117647059
+  }
+}

@@ -1,0 +1,20 @@
+family,model,val_ap
+Gramicidin S+OdlS+histi,majority,0.1211799096465586
+Gramicidin S+OdlS+histi,logreg_C0.001,0.3078450813690185
+Gramicidin S+OdlS+histi,logreg_C0.01,0.29340790183256715
+Gramicidin S+OdlS+histi,logreg_C0.1,0.28108806824180094
+Gramicidin S+OdlS+histi,logreg_C1.0,0.27301464909520745
+Gramicidin S+OdlS+histi,logreg_C10.0,0.2956559677199968
+Gramicidin S+OdlS+histi,logreg_C30.0,0.298475724508588
+Gramicidin S+OdlS+histi,logreg_C100.0,0.29840899009563004
+Gramicidin S+OdlS+histi,logreg_C300.0,0.30120061860699165
+Gramicidin S+OdlS+histi,mlp_64_a0.0001,0.24165280352341886
+Gramicidin S+OdlS+histi,mlp_64_a0.01,0.2540048054765181
+Gramicidin S+OdlS+histi,mlp_256_a0.0001,0.24833257723370966
+Gramicidin S+OdlS+histi,mlp_256_a0.01,0.2673523080629297
+Gramicidin S+OdlS+histi,mlp_256x64_a0.0001,0.26521462343468016
+Gramicidin S+OdlS+histi,mlp_256x64_a0.01,0.26488201204796163
+Gramicidin S+OdlS+histi,hgb_lr0.05_l31,0.31915814671566584
+Gramicidin S+OdlS+histi,hgb_lr0.05_l63,0.31076422250311725
+Gramicidin S+OdlS+histi,hgb_lr0.1_l31,0.316324441799662
+Gramicidin S+OdlS+histi,hgb_lr0.1_l63,0.3080537683589873

@@ -1,0 +1,75 @@
+{
+  "family": "Gramicidin S+OdlS+histi",
+  "config": {
+    "n_kmers": 139960,
+    "l2": 3.0,
+    "min_df": 5,
+    "max_iter": 2500
+  },
+  "n_kmers_requested": 150000,
+  "n_kmers_eligible": 139960,
+  "n_kmers_capped": true,
+  "tuning": "frozen from REPORT.md",
+  "val": {
+    "ap": 0.3203557487857803,
+    "roc_auc": 0.8014395964965331,
+    "at_0": {
+      "threshold": 0.0,
+      "TN": 2969,
+      "FP": 338,
+      "FN": 264,
+      "TP": 192,
+      "accuracy": 0.8400212596332713,
+      "balanced_accuracy": 0.6594225964063469,
+      "precision": 0.3622641509433962,
+      "recall": 0.42105263157894735,
+      "specificity": 0.8977925612337466,
+      "f1": 0.3894523326572008
+    },
+    "at_f1": {
+      "threshold": -1.1012727754418574,
+      "TN": 2758,
+      "FP": 549,
+      "FN": 201,
+      "TP": 255,
+      "accuracy": 0.8006909380813181,
+      "balanced_accuracy": 0.696599517769325,
+      "precision": 0.31716417910447764,
+      "recall": 0.5592105263157895,
+      "specificity": 0.8339885092228606,
+      "f1": 0.4047619047619048
+    }
+  },
+  "test": {
+    "ap": 0.20497922053663906,
+    "roc_auc": 0.8258595201091694,
+    "converged": true,
+    "chance_ap": 0.04933333333333333,
+    "at_0": {
+      "threshold": 0.0,
+      "TN": 684,
+      "FP": 29,
+      "FN": 26,
+      "TP": 11,
+      "accuracy": 0.9266666666666666,
+      "balanced_accuracy": 0.6283120427580455,
+      "precision": 0.275,
+      "recall": 0.2972972972972973,
+      "specificity": 0.9593267882187938,
+      "f1": 0.28571428571428575
+    },
+    "at_f1": {
+      "threshold": -1.1012727754418574,
+      "TN": 661,
+      "FP": 52,
+      "FN": 18,
+      "TP": 19,
+      "accuracy": 0.9066666666666666,
+      "balanced_accuracy": 0.7202911186080891,
+      "precision": 0.2676056338028169,
+      "recall": 0.5135135135135135,
+      "specificity": 0.9270687237026648,
+      "f1": 0.35185185185185186
+    }
+  }
+}

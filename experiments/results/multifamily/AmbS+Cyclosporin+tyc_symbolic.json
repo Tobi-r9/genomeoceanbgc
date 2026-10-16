@@ -1,0 +1,75 @@
+{
+  "family": "AmbS+Cyclosporin+tyc",
+  "config": {
+    "n_kmers": 150000,
+    "l2": 3.0,
+    "min_df": 5,
+    "max_iter": 2500
+  },
+  "n_kmers_requested": 150000,
+  "n_kmers_eligible": 153325,
+  "n_kmers_capped": false,
+  "tuning": "frozen from REPORT.md",
+  "val": {
+    "ap": 0.5198520175600695,
+    "roc_auc": 0.8522554433721947,
+    "at_0": {
+      "threshold": 0.0,
+      "TN": 2314,
+      "FP": 247,
+      "FN": 187,
+      "TP": 233,
+      "accuracy": 0.8544112713854412,
+      "balanced_accuracy": 0.7291576021271453,
+      "precision": 0.48541666666666666,
+      "recall": 0.5547619047619048,
+      "specificity": 0.9035532994923858,
+      "f1": 0.5177777777777779
+    },
+    "at_f1": {
+      "threshold": -0.49497252412332016,
+      "TN": 2227,
+      "FP": 334,
+      "FN": 150,
+      "TP": 270,
+      "accuracy": 0.8376383763837638,
+      "balanced_accuracy": 0.7562196686562169,
+      "precision": 0.4470198675496689,
+      "recall": 0.6428571428571429,
+      "specificity": 0.869582194455291,
+      "f1": 0.52734375
+    }
+  },
+  "test": {
+    "ap": 0.5471795388560977,
+    "roc_auc": 0.8517047055508593,
+    "converged": true,
+    "chance_ap": 0.14634146341463414,
+    "at_0": {
+      "threshold": 0.0,
+      "TN": 430,
+      "FP": 25,
+      "FN": 38,
+      "TP": 40,
+      "accuracy": 0.8818011257035647,
+      "balanced_accuracy": 0.7289377289377289,
+      "precision": 0.6153846153846154,
+      "recall": 0.5128205128205128,
+      "specificity": 0.945054945054945,
+      "f1": 0.5594405594405595
+    },
+    "at_f1": {
+      "threshold": -0.49497252412332016,
+      "TN": 425,
+      "FP": 30,
+      "FN": 35,
+      "TP": 43,
+      "accuracy": 0.8780487804878049,
+      "balanced_accuracy": 0.7426739926739927,
+      "precision": 0.589041095890411,
+      "recall": 0.5512820512820513,
+      "specificity": 0.9340659340659341,
+      "f1": 0.5695364238410597
+    }
+  }
+}

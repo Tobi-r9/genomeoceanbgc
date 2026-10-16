@@ -1,0 +1,28 @@
+{
+  "family": "Pps",
+  "params": {
+    "objective": "binary:logistic",
+    "eval_metric": "auc",
+    "max_depth": 6,
+    "eta": 0.05,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "tree_method": "hist",
+    "random_state": 42
+  },
+  "n_rounds": 300,
+  "n_features_val": 2107,
+  "n_features_test": 2110,
+  "n_organisms_val": 99,
+  "n_organisms_test": 102,
+  "tuning": "none (their code has no sweep)",
+  "val": {
+    "ap": 0.3823694261858396,
+    "roc_auc": 0.8882626886718061
+  },
+  "test": {
+    "ap": 0.4121385607496421,
+    "roc_auc": 0.8735236430307424,
+    "chance_ap": 0.08608058608058608
+  }
+}

@@ -1,0 +1,5 @@
+family,arm,vs,d_ap,lo,hi,p_emb_better,significant
+Bicornutin+HisS+TriS,tuned,modules+bigram,-0.02925055917524214,-0.09342721229281173,0.03934041176036072,0.188,False
+Bicornutin+HisS+TriS,tuned,modules,-0.06727939922780476,-0.1368394259201654,0.0030791934280759064,0.0295,False
+Bicornutin+HisS+TriS,frozen,modules+bigram,-0.41182221846127764,-0.47363593449642677,-0.3498543411283258,0.0,False
+Bicornutin+HisS+TriS,frozen,modules,-0.4489477186667677,-0.5146698554282739,-0.3772128603900763,0.0,False

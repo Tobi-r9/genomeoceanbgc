@@ -1,0 +1,5 @@
+family,arm,vs,d_ap,lo,hi,p_emb_better,significant
+Gramicidin S+OdlS+histi,tuned,modules+bigram,-0.01351378402498845,-0.10648505991558312,0.09146900202880454,0.375,False
+Gramicidin S+OdlS+histi,tuned,modules,0.00747193321482718,-0.11015928354552433,0.13470344089603511,0.5415,False
+Gramicidin S+OdlS+histi,frozen,modules+bigram,-0.143918806523604,-0.2336709678643741,-0.06891687429731083,0.0,False
+Gramicidin S+OdlS+histi,frozen,modules,-0.08610166859146955,-0.14151647486007002,-0.04028347995026553,0.0,False

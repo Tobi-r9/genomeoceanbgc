@@ -22,12 +22,30 @@ MODEL_TOKEN_LIMITS = {
     'pGenomeOcean/GenomeOcean-100M': 1024,
     'pGenomeOcean/GenomeOcean-500M': 1024,
     'pGenomeOcean/GenomeOcean-4B': 10240,
+    'pGenomeOcean/GenomeOcean-4B-bgcFM': 10240,
+    'pGenomeOcean/GenomeOcean-4B-Artificial-Detector': 10240,
     # Legacy aliases kept for backward compatibility with users still
     # referencing the old DOEJGI/* namespace.
     'DOEJGI/GenomeOcean-100M': 1024,
     'DOEJGI/GenomeOcean-500M': 1024,
     'DOEJGI/GenomeOcean-4B': 10240,
 }
+
+
+def _infer_token_limit(model_name_or_path):
+    """Map a local model directory to its token limit by basename.
+
+    Pre-staged models (HPC clusters have no outbound internet on compute nodes)
+    are passed as absolute paths, which never match MODEL_TOKEN_LIMITS. The old
+    behaviour was to fall back to 1024 with a warning -- for a 4B model that
+    silently truncates inputs to 1/10th of the supported length, i.e. it quietly
+    discards most of every long sequence. Match on the directory name instead.
+    """
+    base = os.path.basename(os.path.normpath(model_name_or_path))
+    for key, limit in MODEL_TOKEN_LIMITS.items():
+        if base == os.path.basename(key):
+            return limit
+    return None
 
 def llm_embed_sequences(dna_sequences,
                         model_name_or_path,
@@ -78,8 +96,13 @@ def llm_embed_sequences(dna_sequences,
     if model_name_or_path not in MODEL_TOKEN_LIMITS:
          # Try to infer if it's a path vs name
          if os.path.isdir(model_name_or_path):
-              logger.warning(f"Model path '{model_name_or_path}' not found in pre-defined MODEL_TOKEN_LIMITS. Assuming default limit of 1024. Performance might be affected if incorrect.")
-              model_max_length = 1024
+              inferred = _infer_token_limit(model_name_or_path)
+              if inferred is not None:
+                   logger.info(f"Model path '{model_name_or_path}' matched a known checkpoint by name; using token limit {inferred}.")
+                   model_max_length = inferred
+              else:
+                   logger.warning(f"Model path '{model_name_or_path}' not found in pre-defined MODEL_TOKEN_LIMITS. Assuming default limit of 1024. Performance might be affected if incorrect.")
+                   model_max_length = 1024
          else:
               raise ValueError(f"Model name '{model_name_or_path}' not found in MODEL_TOKEN_LIMITS configuration.")
     else:
@@ -125,10 +148,15 @@ def llm_embed_sequences(dna_sequences,
         logger.info("Loading model...")
         # Try loading with bfloat16, fallback to float32 if needed
         try:
+            # trust_remote_code=False is REQUIRED on transformers >= 5: the
+            # checkpoints' bundled modeling_mistral.py targets 4.38 and silently
+            # produces wrong hidden states under 5.x (it also crashes outright
+            # unless use_cache is disabled). See the long note in
+            # llm_utils.LLMUtils.model for the measurements.
             model = transformers.AutoModel.from_pretrained(
                 model_name_or_path,
-                trust_remote_code=True,
-                torch_dtype=torch.bfloat16,
+                trust_remote_code=False,
+                dtype=torch.bfloat16,  # `torch_dtype` is deprecated in transformers 5
                 attn_implementation=attn_implementation,
             )
             model.config.use_cache = False
@@ -137,7 +165,7 @@ def llm_embed_sequences(dna_sequences,
              logger.warning(f"Failed to load model with bfloat16 ({e}). Falling back to default (float32).")
              model = transformers.AutoModel.from_pretrained(
                 model_name_or_path,
-                trust_remote_code=True,
+                trust_remote_code=False,
                 # dtype=torch.float32, # Default
              )
              model.config.use_cache = False

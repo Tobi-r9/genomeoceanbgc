@@ -1,0 +1,75 @@
+{
+  "family": "FabS+SldS+XenS",
+  "config": {
+    "n_kmers": 150000,
+    "l2": 3.0,
+    "min_df": 5,
+    "max_iter": 2500
+  },
+  "n_kmers_requested": 150000,
+  "n_kmers_eligible": 150391,
+  "n_kmers_capped": false,
+  "tuning": "frozen from REPORT.md",
+  "val": {
+    "ap": 0.12786783253675588,
+    "roc_auc": 0.8051988792629262,
+    "at_0": {
+      "threshold": 0.0,
+      "TN": 2084,
+      "FP": 340,
+      "FN": 53,
+      "TP": 43,
+      "accuracy": 0.844047619047619,
+      "balanced_accuracy": 0.6538263201320133,
+      "precision": 0.1122715404699739,
+      "recall": 0.4479166666666667,
+      "specificity": 0.8597359735973598,
+      "f1": 0.17954070981210857
+    },
+    "at_f1": {
+      "threshold": 1.276524431407783,
+      "TN": 2286,
+      "FP": 138,
+      "FN": 69,
+      "TP": 27,
+      "accuracy": 0.9178571428571428,
+      "balanced_accuracy": 0.6121596534653465,
+      "precision": 0.16363636363636364,
+      "recall": 0.28125,
+      "specificity": 0.943069306930693,
+      "f1": 0.20689655172413793
+    }
+  },
+  "test": {
+    "ap": 0.33841365908989907,
+    "roc_auc": 0.7795086419753087,
+    "converged": true,
+    "chance_ap": 0.12903225806451613,
+    "at_0": {
+      "threshold": 0.0,
+      "TN": 1712,
+      "FP": 313,
+      "FN": 146,
+      "TP": 154,
+      "accuracy": 0.8025806451612904,
+      "balanced_accuracy": 0.6793827160493827,
+      "precision": 0.3297644539614561,
+      "recall": 0.5133333333333333,
+      "specificity": 0.8454320987654321,
+      "f1": 0.40156453715775753
+    },
+    "at_f1": {
+      "threshold": 1.276524431407783,
+      "TN": 1931,
+      "FP": 94,
+      "FN": 231,
+      "TP": 69,
+      "accuracy": 0.8602150537634409,
+      "balanced_accuracy": 0.5917901234567902,
+      "precision": 0.4233128834355828,
+      "recall": 0.23,
+      "specificity": 0.9535802469135802,
+      "f1": 0.29805615550755943
+    }
+  }
+}

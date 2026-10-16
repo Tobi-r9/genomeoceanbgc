@@ -105,10 +105,23 @@ class LLMUtils:
                 torch.cuda.empty_cache()
 
             MODEL_CLASS = transformers.AutoModel if not self.is_classification_model else transformers.AutoModelForSequenceClassification
+            # trust_remote_code=False is REQUIRED on transformers >= 5, not just
+            # preferred. The checkpoints ship a modeling_mistral.py written
+            # against transformers 4.38; it still imports under 5.x but silently
+            # computes wrong hidden states. Measured on GenomeOcean-4B-bgcFM
+            # (JUPITER/GH200, transformers 5.14.1): with the remote code the
+            # model scores random DNA *better* than real DNA (7.17 vs 7.24
+            # nats/token), i.e. the embeddings carry no signal; with the native
+            # transformers Mistral it scores real DNA at 1.75 bits/bp vs 2.04 for
+            # random. Embeddings differ by up to 3.4 absolute on a +-8 scale.
+            # The checkpoint is plain Mistral (verified against the weight
+            # shapes: 12 heads x 256 head_dim, 4 KV heads, rope_theta 1e6 all
+            # carried over correctly), so nothing is lost by using native code.
+            # See jupiter/test_bgc_model.py, which asserts the real-vs-random gap.
             self._model = MODEL_CLASS.from_pretrained(
                 self.model_dir,
-                trust_remote_code=True,
-                torch_dtype=torch.bfloat16,
+                trust_remote_code=False,
+                dtype=torch.bfloat16,  # `torch_dtype` is deprecated in transformers 5
                 attn_implementation="sdpa",
             )
             self._model.config.use_cache = False

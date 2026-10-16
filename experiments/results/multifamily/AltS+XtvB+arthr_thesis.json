@@ -1,0 +1,28 @@
+{
+  "family": "AltS+XtvB+arthr",
+  "params": {
+    "objective": "binary:logistic",
+    "eval_metric": "auc",
+    "max_depth": 6,
+    "eta": 0.05,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "tree_method": "hist",
+    "random_state": 42
+  },
+  "n_rounds": 300,
+  "n_features_val": 2097,
+  "n_features_test": 2109,
+  "n_organisms_val": 89,
+  "n_organisms_test": 101,
+  "tuning": "none (their code has no sweep)",
+  "val": {
+    "ap": 0.3529032994959539,
+    "roc_auc": 0.8328284331611391
+  },
+  "test": {
+    "ap": 0.40001337350370125,
+    "roc_auc": 0.796946627373936,
+    "chance_ap": 0.12392426850258176
+  }
+}

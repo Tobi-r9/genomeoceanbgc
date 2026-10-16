@@ -1,0 +1,28 @@
+{
+  "family": "BanS",
+  "params": {
+    "objective": "binary:logistic",
+    "eval_metric": "auc",
+    "max_depth": 6,
+    "eta": 0.05,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "tree_method": "hist",
+    "random_state": 42
+  },
+  "n_rounds": 300,
+  "n_features_val": 2101,
+  "n_features_test": 2110,
+  "n_organisms_val": 93,
+  "n_organisms_test": 102,
+  "tuning": "none (their code has no sweep)",
+  "val": {
+    "ap": 0.2657008388098231,
+    "roc_auc": 0.8054146769154813
+  },
+  "test": {
+    "ap": 0.628380644057758,
+    "roc_auc": 0.8803331633520313,
+    "chance_ap": 0.10422535211267606
+  }
+}

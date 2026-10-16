@@ -1,0 +1,28 @@
+{
+  "family": "CipS",
+  "params": {
+    "objective": "binary:logistic",
+    "eval_metric": "auc",
+    "max_depth": 6,
+    "eta": 0.05,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "tree_method": "hist",
+    "random_state": 42
+  },
+  "n_rounds": 300,
+  "n_features_val": 2104,
+  "n_features_test": 2110,
+  "n_organisms_val": 96,
+  "n_organisms_test": 102,
+  "tuning": "none (their code has no sweep)",
+  "val": {
+    "ap": 0.4517370837905375,
+    "roc_auc": 0.8879489013223396
+  },
+  "test": {
+    "ap": 0.3935201371588318,
+    "roc_auc": 0.9073879551820729,
+    "chance_ap": 0.056647398843930635
+  }
+}

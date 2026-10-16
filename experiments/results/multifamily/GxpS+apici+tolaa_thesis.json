@@ -1,0 +1,28 @@
+{
+  "family": "GxpS+apici+tolaa",
+  "params": {
+    "objective": "binary:logistic",
+    "eval_metric": "auc",
+    "max_depth": 6,
+    "eta": 0.05,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "tree_method": "hist",
+    "random_state": 42
+  },
+  "n_rounds": 300,
+  "n_features_val": 2089,
+  "n_features_test": 2098,
+  "n_organisms_val": 81,
+  "n_organisms_test": 90,
+  "tuning": "none (their code has no sweep)",
+  "val": {
+    "ap": 0.4063531712316085,
+    "roc_auc": 0.884870019436346
+  },
+  "test": {
+    "ap": 0.49411010464319477,
+    "roc_auc": 0.8408277515768839,
+    "chance_ap": 0.1459607338268426
+  }
+}

@@ -1,0 +1,5 @@
+method,model,n_features,test_ap,ap_lo,ap_hi,test_roc_auc,description
+emb_mean,logreg_C10.0,3072.0,0.7334999774986927,0.6846956182869852,0.7798096012275969,0.9289287038287672,"GenomeOcean-4B mean-pooled embedding (3072-d), logistic regression C=10"
+symbolic,n_kmers150000_l23.0_it2500,,0.7243368881239236,0.6759338823145231,0.7712736694655908,0.924319842745516,"hand-designed protein features (composition + NRPS motifs + hashed 6-mers + terminal signatures), logistic regression"
+modules+bigram,hgb_lr0.1_l63,6580.0,0.7079694429581148,0.6590830974230985,0.7553954073646523,0.9335239143491842,"which modules are present + which adjacent pairs, gradient boosting"
+modules,hgb_lr0.1_l63,1173.0,0.6934770788275204,0.641850200289577,0.7408189417024822,0.9312845035936902,"which modules are present (order-blind), gradient boosting"

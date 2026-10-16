@@ -1,0 +1,75 @@
+{
+  "family": "Brevibacillus",
+  "config": {
+    "n_kmers": 150000,
+    "l2": 3.0,
+    "min_df": 5,
+    "max_iter": 2500
+  },
+  "n_kmers_requested": 150000,
+  "n_kmers_eligible": 151430,
+  "n_kmers_capped": false,
+  "tuning": "frozen from REPORT.md",
+  "val": {
+    "ap": 0.40444418363021506,
+    "roc_auc": 0.7720665350340117,
+    "at_0": {
+      "threshold": 0.0,
+      "TN": 1556,
+      "FP": 517,
+      "FN": 95,
+      "TP": 152,
+      "accuracy": 0.7362068965517241,
+      "balanced_accuracy": 0.6829938031095774,
+      "precision": 0.22720478325859492,
+      "recall": 0.6153846153846154,
+      "specificity": 0.7506029908345393,
+      "f1": 0.3318777292576419
+    },
+    "at_f1": {
+      "threshold": 3.7225570597347306,
+      "TN": 2011,
+      "FP": 62,
+      "FN": 169,
+      "TP": 78,
+      "accuracy": 0.9004310344827586,
+      "balanced_accuracy": 0.6429405641455302,
+      "precision": 0.5571428571428572,
+      "recall": 0.3157894736842105,
+      "specificity": 0.97009165460685,
+      "f1": 0.40310077519379844
+    }
+  },
+  "test": {
+    "ap": 0.14908901096729213,
+    "roc_auc": 0.8823819591261451,
+    "converged": true,
+    "chance_ap": 0.029783393501805054,
+    "at_0": {
+      "threshold": 0.0,
+      "TN": 1040,
+      "FP": 35,
+      "FN": 24,
+      "TP": 9,
+      "accuracy": 0.9467509025270758,
+      "balanced_accuracy": 0.6200845665961945,
+      "precision": 0.20454545454545456,
+      "recall": 0.2727272727272727,
+      "specificity": 0.9674418604651163,
+      "f1": 0.23376623376623376
+    },
+    "at_f1": {
+      "threshold": 3.7225570597347306,
+      "TN": 1075,
+      "FP": 0,
+      "FN": 33,
+      "TP": 0,
+      "accuracy": 0.970216606498195,
+      "balanced_accuracy": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0
+    }
+  }
+}

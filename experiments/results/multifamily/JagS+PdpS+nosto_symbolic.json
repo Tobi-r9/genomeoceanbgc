@@ -1,0 +1,75 @@
+{
+  "family": "JagS+PdpS+nosto",
+  "config": {
+    "n_kmers": 150000,
+    "l2": 3.0,
+    "min_df": 5,
+    "max_iter": 2500
+  },
+  "n_kmers_requested": 150000,
+  "n_kmers_eligible": 151879,
+  "n_kmers_capped": false,
+  "tuning": "frozen from REPORT.md",
+  "val": {
+    "ap": 0.4246304579109117,
+    "roc_auc": 0.829476441868773,
+    "at_0": {
+      "threshold": 0.0,
+      "TN": 2932,
+      "FP": 179,
+      "FN": 252,
+      "TP": 161,
+      "accuracy": 0.8776958002270148,
+      "balanced_accuracy": 0.6661463696342667,
+      "precision": 0.47352941176470587,
+      "recall": 0.3898305084745763,
+      "specificity": 0.942462230793957,
+      "f1": 0.42762284196547146
+    },
+    "at_f1": {
+      "threshold": -1.1460354047841137,
+      "TN": 2731,
+      "FP": 380,
+      "FN": 187,
+      "TP": 226,
+      "accuracy": 0.8391032917139614,
+      "balanced_accuracy": 0.7125341384122419,
+      "precision": 0.37293729372937295,
+      "recall": 0.5472154963680388,
+      "specificity": 0.8778527804564449,
+      "f1": 0.4435721295387635
+    }
+  },
+  "test": {
+    "ap": 0.6269237172611641,
+    "roc_auc": 0.9006862394080439,
+    "converged": true,
+    "chance_ap": 0.09723643807574207,
+    "at_0": {
+      "threshold": 0.0,
+      "TN": 636,
+      "FP": 246,
+      "FN": 13,
+      "TP": 82,
+      "accuracy": 0.7349027635619243,
+      "balanced_accuracy": 0.7921231650554958,
+      "precision": 0.25,
+      "recall": 0.8631578947368421,
+      "specificity": 0.7210884353741497,
+      "f1": 0.3877068557919622
+    },
+    "at_f1": {
+      "threshold": -1.1460354047841137,
+      "TN": 512,
+      "FP": 370,
+      "FN": 5,
+      "TP": 90,
+      "accuracy": 0.6161719549641761,
+      "balanced_accuracy": 0.7639336436328917,
+      "precision": 0.1956521739130435,
+      "recall": 0.9473684210526315,
+      "specificity": 0.5804988662131519,
+      "f1": 0.3243243243243243
+    }
+  }
+}

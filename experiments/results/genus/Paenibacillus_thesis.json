@@ -1,0 +1,28 @@
+{
+  "family": "Paenibacillus",
+  "params": {
+    "objective": "binary:logistic",
+    "eval_metric": "auc",
+    "max_depth": 6,
+    "eta": 0.05,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "tree_method": "hist",
+    "random_state": 42
+  },
+  "n_rounds": 300,
+  "n_features_val": 2076,
+  "n_features_test": 2106,
+  "n_organisms_val": 68,
+  "n_organisms_test": 98,
+  "tuning": "none (their code has no sweep)",
+  "val": {
+    "ap": 0.3333247778005439,
+    "roc_auc": 0.8130624394295999
+  },
+  "test": {
+    "ap": 0.17617075744436597,
+    "roc_auc": 0.8846542328290895,
+    "chance_ap": 0.02566371681415929
+  }
+}

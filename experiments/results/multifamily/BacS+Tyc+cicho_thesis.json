@@ -1,0 +1,28 @@
+{
+  "family": "BacS+Tyc+cicho",
+  "params": {
+    "objective": "binary:logistic",
+    "eval_metric": "auc",
+    "max_depth": 6,
+    "eta": 0.05,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "tree_method": "hist",
+    "random_state": 42
+  },
+  "n_rounds": 300,
+  "n_features_val": 2103,
+  "n_features_test": 2109,
+  "n_organisms_val": 95,
+  "n_organisms_test": 101,
+  "tuning": "none (their code has no sweep)",
+  "val": {
+    "ap": 0.5573305109220575,
+    "roc_auc": 0.8944509183872524
+  },
+  "test": {
+    "ap": 0.26228567511021833,
+    "roc_auc": 0.8506074681053891,
+    "chance_ap": 0.04288321167883212
+  }
+}

@@ -1,0 +1,2 @@
+n_kmers,l2,min_df,max_iter,val_ap,val_roc_auc,converged,n_iter,fit_s
+80000,3.0,5,2500,0.6969183830852409,0.9242329165717528,True,1714,152.1

@@ -1,0 +1,5 @@
+family,arm,vs,d_ap,lo,hi,p_emb_better,significant
+AmbS+Cyclosporin+tyc,tuned,modules+bigram,-0.18618935741145975,-0.28893885049118156,-0.08868776631473059,0.0005,False
+AmbS+Cyclosporin+tyc,tuned,modules,-0.1672605156921261,-0.27022637080282663,-0.07224797831538814,0.0,False
+AmbS+Cyclosporin+tyc,frozen,modules+bigram,-0.003736092526107403,-0.12819124195967793,0.12012969704595562,0.481,False
+AmbS+Cyclosporin+tyc,frozen,modules,0.012980953241797924,-0.1145960766701999,0.13901656987406422,0.5745,False

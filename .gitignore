@@ -13,3 +13,6 @@ genomeocean.egg-info/dependency_links.txt
 genomeocean.egg-info/PKG-INFO
 genomeocean.egg-info/SOURCES.txt
 genomeocean.egg-info/top_level.txt
+
+# >100 MB, over GitHub's file limit -- regenerate with experiments/make_release.py --out release/nrps_splits_v1
+release/nrps_splits_v1/sequences.parquet

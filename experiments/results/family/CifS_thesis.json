@@ -1,0 +1,28 @@
+{
+  "family": "CifS",
+  "params": {
+    "objective": "binary:logistic",
+    "eval_metric": "auc",
+    "max_depth": 6,
+    "eta": 0.05,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "tree_method": "hist",
+    "random_state": 42
+  },
+  "n_rounds": 300,
+  "n_features_val": 2105,
+  "n_features_test": 2110,
+  "n_organisms_val": 97,
+  "n_organisms_test": 102,
+  "tuning": "none (their code has no sweep)",
+  "val": {
+    "ap": 0.6784430979265282,
+    "roc_auc": 0.8914881220144378
+  },
+  "test": {
+    "ap": 0.6668397436192856,
+    "roc_auc": 0.8715903106898367,
+    "chance_ap": 0.17578125
+  }
+}

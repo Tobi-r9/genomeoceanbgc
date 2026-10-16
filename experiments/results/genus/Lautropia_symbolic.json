@@ -1,0 +1,75 @@
+{
+  "family": "Lautropia",
+  "config": {
+    "n_kmers": 144483,
+    "l2": 3.0,
+    "min_df": 5,
+    "max_iter": 2500
+  },
+  "n_kmers_requested": 150000,
+  "n_kmers_eligible": 144483,
+  "n_kmers_capped": true,
+  "tuning": "frozen from REPORT.md",
+  "val": {
+    "ap": 0.4000358687992654,
+    "roc_auc": 0.837059876759243,
+    "at_0": {
+      "threshold": 0.0,
+      "TN": 2331,
+      "FP": 605,
+      "FN": 78,
+      "TP": 140,
+      "accuracy": 0.7834495878249842,
+      "balanced_accuracy": 0.718069582281329,
+      "precision": 0.18791946308724833,
+      "recall": 0.6422018348623854,
+      "specificity": 0.7939373297002725,
+      "f1": 0.29075804776739356
+    },
+    "at_f1": {
+      "threshold": 3.866090833857449,
+      "TN": 2880,
+      "FP": 56,
+      "FN": 141,
+      "TP": 77,
+      "accuracy": 0.9375396322130628,
+      "balanced_accuracy": 0.6670687198460116,
+      "precision": 0.5789473684210527,
+      "recall": 0.3532110091743119,
+      "specificity": 0.9809264305177112,
+      "f1": 0.43874643874643876
+    }
+  },
+  "test": {
+    "ap": 0.3365811611804281,
+    "roc_auc": 0.859214315096668,
+    "converged": true,
+    "chance_ap": 0.10625,
+    "at_0": {
+      "threshold": 0.0,
+      "TN": 284,
+      "FP": 2,
+      "FN": 34,
+      "TP": 0,
+      "accuracy": 0.8875,
+      "balanced_accuracy": 0.4965034965034965,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 0.993006993006993,
+      "f1": 0.0
+    },
+    "at_f1": {
+      "threshold": 3.866090833857449,
+      "TN": 286,
+      "FP": 0,
+      "FN": 34,
+      "TP": 0,
+      "accuracy": 0.89375,
+      "balanced_accuracy": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0
+    }
+  }
+}

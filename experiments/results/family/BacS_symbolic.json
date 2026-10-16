@@ -1,0 +1,72 @@
+{
+  "family": "BacS",
+  "config": {
+    "n_kmers": 150000,
+    "l2": 3.0,
+    "min_df": 5,
+    "max_iter": 2500
+  },
+  "tuning": "frozen from REPORT.md",
+  "val": {
+    "ap": 0.38257405310317527,
+    "roc_auc": 0.7558382265127388,
+    "at_0": {
+      "threshold": 0.0,
+      "TN": 2727,
+      "FP": 413,
+      "FN": 378,
+      "TP": 262,
+      "accuracy": 0.7907407407407407,
+      "balanced_accuracy": 0.6389231687898089,
+      "precision": 0.38814814814814813,
+      "recall": 0.409375,
+      "specificity": 0.8684713375796178,
+      "f1": 0.39847908745247146
+    },
+    "at_f1": {
+      "threshold": -1.4047621113406548,
+      "TN": 2306,
+      "FP": 834,
+      "FN": 245,
+      "TP": 395,
+      "accuracy": 0.7145502645502646,
+      "balanced_accuracy": 0.6757912022292993,
+      "precision": 0.3213995117982099,
+      "recall": 0.6171875,
+      "specificity": 0.7343949044585987,
+      "f1": 0.42268592830390583
+    }
+  },
+  "test": {
+    "ap": 0.2396675293208714,
+    "roc_auc": 0.8451507437356495,
+    "converged": true,
+    "chance_ap": 0.04216867469879518,
+    "at_0": {
+      "threshold": 0.0,
+      "TN": 954,
+      "FP": 0,
+      "FN": 42,
+      "TP": 0,
+      "accuracy": 0.9578313253012049,
+      "balanced_accuracy": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0
+    },
+    "at_f1": {
+      "threshold": -1.4047621113406548,
+      "TN": 952,
+      "FP": 2,
+      "FN": 42,
+      "TP": 0,
+      "accuracy": 0.9558232931726908,
+      "balanced_accuracy": 0.4989517819706499,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 0.9979035639412998,
+      "f1": 0.0
+    }
+  }
+}

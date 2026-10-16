@@ -1,0 +1,5 @@
+family,arm,vs,d_ap,lo,hi,p_emb_better,significant
+JagS+PdpS+nosto,tuned,modules+bigram,-0.4313595339234653,-0.528153165249883,-0.3347848204806859,0.0,False
+JagS+PdpS+nosto,tuned,modules,-0.36393478872278834,-0.47535612406820943,-0.2591520055008785,0.0,False
+JagS+PdpS+nosto,frozen,modules+bigram,-0.4823133845534072,-0.5806678383953373,-0.3766558298856198,0.0,False
+JagS+PdpS+nosto,frozen,modules,-0.4425738014449794,-0.549757626731151,-0.33141748493534345,0.0,False

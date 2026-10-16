@@ -1,0 +1,75 @@
+{
+  "family": "PrtS+XgsC+XldS",
+  "config": {
+    "n_kmers": 150000,
+    "l2": 3.0,
+    "min_df": 5,
+    "max_iter": 2500
+  },
+  "n_kmers_requested": 150000,
+  "n_kmers_eligible": 152033,
+  "n_kmers_capped": false,
+  "tuning": "frozen from REPORT.md",
+  "val": {
+    "ap": 0.3076500999201035,
+    "roc_auc": 0.8045624478625086,
+    "at_0": {
+      "threshold": 0.0,
+      "TN": 2704,
+      "FP": 235,
+      "FN": 204,
+      "TP": 117,
+      "accuracy": 0.8653374233128834,
+      "balanced_accuracy": 0.642263405761385,
+      "precision": 0.33238636363636365,
+      "recall": 0.3644859813084112,
+      "specificity": 0.9200408302143587,
+      "f1": 0.34769687964338775
+    },
+    "at_f1": {
+      "threshold": -0.9240658624686968,
+      "TN": 2466,
+      "FP": 473,
+      "FN": 136,
+      "TP": 185,
+      "accuracy": 0.8131901840490797,
+      "balanced_accuracy": 0.7076924463043461,
+      "precision": 0.2811550151975684,
+      "recall": 0.5763239875389408,
+      "specificity": 0.8390609050697516,
+      "f1": 0.37793667007150156
+    }
+  },
+  "test": {
+    "ap": 0.46040822540666726,
+    "roc_auc": 0.8234215921945702,
+    "converged": true,
+    "chance_ap": 0.1880969875091844,
+    "at_0": {
+      "threshold": 0.0,
+      "TN": 902,
+      "FP": 203,
+      "FN": 94,
+      "TP": 162,
+      "accuracy": 0.7817781043350478,
+      "balanced_accuracy": 0.7245510463800905,
+      "precision": 0.4438356164383562,
+      "recall": 0.6328125,
+      "specificity": 0.816289592760181,
+      "f1": 0.5217391304347826
+    },
+    "at_f1": {
+      "threshold": -0.9240658624686968,
+      "TN": 810,
+      "FP": 295,
+      "FN": 65,
+      "TP": 191,
+      "accuracy": 0.7354886113152094,
+      "balanced_accuracy": 0.7395627121040724,
+      "precision": 0.39300411522633744,
+      "recall": 0.74609375,
+      "specificity": 0.7330316742081447,
+      "f1": 0.5148247978436657
+    }
+  }
+}

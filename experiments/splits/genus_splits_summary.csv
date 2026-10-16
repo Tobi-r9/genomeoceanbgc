@@ -1,0 +1,8 @@
+family,n_members,members,n_train,n_val,n_test,pos_train,pos_val,pos_test,test_positives,val_positives,test_modules,test_modules_unseen_in_train,one_swap_leak_pct,max_jaccard_median,test_frac_maxjac_ge_0.7,n_val_groups,primary
+Pseudomonas,1,Pseudomonas,9098,3592,3295,0.1988,0.0348,0.0983,324,125,283,170,76.0,0.714,0.586,11,False
+Paenibacillus,1,Paenibacillus,11644,2081,2260,0.1703,0.1043,0.0257,58,217,174,54,57.8,0.6,0.303,19,False
+Bacillus,1,Bacillus,10840,3197,1948,0.1787,0.0751,0.0416,81,240,282,116,24.8,0.4,0.132,29,True
+Brevibacillus,1,Brevibacillus,12557,2320,1108,0.1575,0.1065,0.0298,33,247,298,50,58.6,0.75,0.598,13,False
+Pedobacter,1,Pedobacter,12752,2266,967,0.1571,0.0715,0.0962,93,162,156,28,34.5,0.5,0.28,13,True
+Erwinia,1,Erwinia,11572,3869,544,0.1609,0.0881,0.1011,55,341,50,14,0.0,0.625,0.0,10,True
+Lautropia,1,Lautropia,12511,3154,320,0.1603,0.0691,0.1062,34,218,92,23,59.4,0.6,0.134,20,False
